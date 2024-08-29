@@ -34,5 +34,8 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'core' => [
+        'veranstaltungen' => 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso',
+    ],
 
 ];

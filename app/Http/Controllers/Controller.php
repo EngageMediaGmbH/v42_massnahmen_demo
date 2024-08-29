@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+use App\Services\VeranstaltungenService;
+
+class Controller
 {
-    //
+    public function index()
+    {
+        $veranstaltungenService = new VeranstaltungenService();
+
+        return $veranstaltungenService->all();
+    }
 }
