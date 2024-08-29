@@ -28,20 +28,20 @@ class LoaderVeranstaltungen implements ShouldQueue
     {
         $start = microtime(true);
 
-        // Load Veranstaltungen
+        // Veranstaltungen Demo
         $veranstaltungenService = new VeranstaltungenService();
         // Request Layer
         $veranstaltungenService->request();
         // Validate Layer
         $veranstaltungenService->validate();
-        // transform
+        // Transform Layer
         $veranstaltungenService->transform();
-        // cache
+        // Cache Layer
         $veranstaltungenService->cache();
 
-        // monitoring (simplified)
+        // Monitoring (simplified)
         $time_elapsed_secs = microtime(true) - $start;
 
-        echo "Time elapsed: $time_elapsed_secs seconds\n";
+        echo "Gesamtzeit: $time_elapsed_secs seconds\n";
     }
 }
